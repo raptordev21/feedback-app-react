@@ -50,6 +50,7 @@ function FeedbackForm() {
       }
 
       setText('')
+      setBtnDisabled(true)
     }
   }
 

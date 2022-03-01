@@ -1,0 +1,29 @@
+{
+  "feedback": [
+    {
+      "text": "Feedback from json-server ddddddd",
+      "rating": 1,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "rating": 1,
+      "text": "Feedback from json-server 2"
+    },
+    {
+      "id": 3,
+      "rating": 7,
+      "text": "Feedback from json-server 3"
+    },
+    {
+      "text": "yyyyyyyyrrrrrrrr",
+      "rating": 2,
+      "id": 4
+    },
+    {
+      "text": "ddddddddddddddd",
+      "rating": 6,
+      "id": 5
+    }
+  ]
+}
