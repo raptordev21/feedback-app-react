@@ -1,7 +1,16 @@
-import { useState } from 'react'
+import { useState, useContext, useEffect } from 'react'
+import FeedbackContext from "../context/FeedbackContext"
 
 function RatingSelect({ select }) {
   const [selected, setSelected] = useState(10)
+
+  const { feedbackEdit } = useContext(FeedbackContext)
+
+  useEffect(() => {
+    if (feedbackEdit.edit === true) {
+      setSelected(feedbackEdit.item.rating)
+    }
+  }, [feedbackEdit])
 
   const handleChange = (e) => {
     setSelected(+e.currentTarget.value)
@@ -28,7 +37,7 @@ function RatingSelect({ select }) {
       </li>
       <li>
         <input type="radio" name="rating" id="num5" value="5" onChange={handleChange} checked={selected === 5} />
-        <label htmlFor="num1">5</label>
+        <label htmlFor="num5">5</label>
       </li>
       <li>
         <input type="radio" name="rating" id="num6" value="6" onChange={handleChange} checked={selected === 6} />
